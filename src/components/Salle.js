@@ -24,7 +24,7 @@ const Salle = ({equipement}) => {
             <li>{equipement.fields.telephone}</li> 
 
             <li>Parking</li>
-            <li>infos_pratiques</li>
+            <li>Infos pratiques</li>
             {equipement.fields.infos_pratiques}
             <li> Réservé : {reserved? "oui": "non"}</li>
         </ul> 
