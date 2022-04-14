@@ -1,8 +1,6 @@
-import {useState} from "react"
 
-const Salle = ({equipement}) => {
+const Salle = () => {
 
-    const [reserved, setReserved] = useState(false)
    return (
        <div>
 
@@ -10,54 +8,22 @@ const Salle = ({equipement}) => {
         backgroundColor: 'purple',
         color: 'white',
         padding: 20, 
-        width: 300,
-        height: 400, 
+        width: 350,
+        height: 500, 
         marginBottom: 10
     }}>
 
-        <h3> {equipement.fields.nom_cplet_lieu}</h3> 
+        <h3> </h3> 
 
-        <ul> Informations :
-            <li>Adresse</li> 
-            <li>{equipement.fields.adresse_lieu}</li> 
-            <li>Téléphone</li> 
-            <li>{equipement.fields.telephone}</li> 
-
-            <li>Parking</li>
-            <li>Infos pratiques</li>
-            {equipement.fields.infos_pratiques}
-            <li> Réservé : {reserved? "oui": "non"}</li>
-        </ul> 
+        <div>
+            <h4>Adresse</h4> 
+            <h4>Téléphone</h4> 
+            <h4>Infos pratiques</h4>
+            <h4> Réservé : </h4>
+        </div> 
         </div>
-        <button style={{
-            backgroundColor: 'white', 
-            color:"purple", 
-            padding: 10, 
-            borderRadius: 7, 
-            backgroundColorHover: "pruple"}}    
-        
-            onClick={()=>{setReserved(!reserved)}}
-        > 
-            {reserved? "Libérer la salle" : "Réserver"}
-        </button>
+       
         
      </div>)
 }
 export default Salle 
-
-
-// const Salle = () => {
-//     return (
-//      <div>
-//          <h3> Nom de la salle</h3>
- 
-//          <ul> Informations :
-//              <li>Adresse</li> 
-//              <li>Téléphone</li> 
-//              <li>Parking</li>
-//              <li>infos_pratiques</li>
-//          </ul> 
-         
-//       </div>)
-//  }
-//  export default Salle 
